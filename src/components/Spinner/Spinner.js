@@ -23,7 +23,7 @@ export const Spinner = ({ inline, page, layout, color, light, dark }) => {
 
   return (
     <div css={styles} className={getClasses()}>
-      <div className="loader">Loading...</div>
+      <div className="spin-parts">Loading...</div>
     </div>
   );
 };

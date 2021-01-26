@@ -3,6 +3,7 @@ import { colors } from './colors';
 import { cssBackgroundFrosted } from './special';
 
 const fontSize = 16;
+const bgColor = 'white';
 
 export const border = css`
   border-color: ${colors.greyXLight};
@@ -23,6 +24,11 @@ export const layout = {
 
 // LAYOUT STYLES
 export const cssLayout = css`
+  html,
+  body {
+    background-color: ${bgColor};
+  }
+
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
@@ -36,6 +42,7 @@ export const cssLayout = css`
   #app {
     display: flex;
     min-height: 100vh;
+    background-color: ${bgColor};
   }
 
   main {
@@ -43,7 +50,7 @@ export const cssLayout = css`
     flex-direction: column;
     flex-grow: 1;
     min-height: 100%;
-    background-color: ${colors.primary};
+    background-color: ${bgColor};
     header + section {
       margin-top: ${layout.header.height};
     }
