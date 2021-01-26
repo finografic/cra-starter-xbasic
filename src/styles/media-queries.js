@@ -11,7 +11,7 @@ export const breakpoints = {
 // MEDIAQUERIES
 const mq = {};
 
-for (let [ key, value ] of Object.entries(breakpoints)) {
+for (const [ key, value ] of Object.entries(breakpoints)) {
   mq[key] = `@media (min-width: ${value}px)`;
 }
 

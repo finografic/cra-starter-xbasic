@@ -26,8 +26,13 @@ export const styles = css`
 
   /*** LOADER ELEMENTS ***/
 
+  /* DEFAULT = dark */
+  & .loader {
+    color: ${colors.greyDark};
+  }
+
   &.color-light .loader {
-    color: ${colors.white};
+    color: white;
   }
   &.color-dark .loader {
     color: ${colors.greyDark};
