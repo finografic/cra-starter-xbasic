@@ -3,7 +3,7 @@
 **Basic React boilerplate app built with:**
 
 - React: react-app-rewired + customize-cra
-- @emotion CSS-in-JS
+- emotion CSS-in-JS
 - eslint
 - babel
 
