@@ -1,0 +1,68 @@
+import { css } from '@emotion/react';
+import { colors } from './colors';
+import { cssBackgroundFrosted } from './special';
+
+const fontSize = 16;
+
+export const border = css`
+  border-color: ${colors.greyXLight};
+  border-style: solid;
+  border-width: 0px;
+`;
+
+// LAYOUT VARIABLES
+export const layout = {
+  fontSize, // px
+  padding: '15px',
+  borderWidth: '2px',
+  borderRadius: '5px',
+  header: {
+    height: '80px',
+  },
+};
+
+// LAYOUT STYLES
+export const cssLayout = css`
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+      'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  #app {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100%;
+    background-color: ${colors.primary};
+    header + section {
+      margin-top: ${layout.header.height};
+    }
+  }
+
+  section {
+    padding: calc(${layout.padding} * 2) calc(${layout.padding} * 1.5);
+  }
+
+  .header {
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+    ${border}
+    border-bottom-width: ${layout.borderWidth};
+    ${cssBackgroundFrosted}
+    box-sizing: border-box;
+    & > div {
+      min-height: calc(${layout.header.height} - 2 * (${layout.padding}));
+    }
+  }
+`;
